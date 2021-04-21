@@ -1,24 +1,39 @@
 
-<div class="container">
-  <div class="row">
-    <div class="mx-auto col-11 col-sm-10 col-lg-8 col-xl-6">
-      <h1>Welcome to test view
-      </h1>
-        <p>In <i class="fas fa-book"></i><strong>Bookers,</strong>
-        <p>you can share and exchange your opinions , inpressions ,and emotions<br>
-        <br>about various books!</p>
-      <div class="btn-wrapper col-10 mx-auto">
-        <div class="row">
-          <%= link_to"Log in",new_customer_session_path,class:"btn btn-info btn-sm btn-block mb-3 sign_in " %>
-          <%= link_to"Sign Up",new_customer_registration_path,class:"btn btn-success btn-sm btn-block sign_up" %>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-auto mx-auto">
+        <p><p></p>
+        ようこそ、ながのCAKEへ！<br>
+        このサイトは、ケーキ販売のECサイトになります。<br>
+        会員でない⽅も商品の閲覧はできますが、<br>
+        購⼊には会員登録が必要になります。</p>
       </div>
-      <div class="container mt-5">
-        <div class="row">
-          <div class="mx-auto">
-            <p>CopyRight Infratop.inc</p>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-1"></div>
+            <h2>新着商品</h2>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-md-2"></div>
+            <!--商品名と値段のidを記載-->
+            <div class="col-md-2"></div>
+            <!--商品名と値段のidを記載-->
+            <div class="col-md-2"></div>
+            <!--商品名と値段のidを記載-->
+            <div class="col-md-2"></div>
+            <!--商品名と値段のidを記載-->
+          </div>
+        </div>
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8"></div>
+              <div class="col-md-2">
+                <%= link_to"全ての商品を見る>",products_path %></p>
+              </div>
+          </div>
+        </div>
+        
