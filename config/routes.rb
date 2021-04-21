@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
 
+  # root 'homes#top'
+  # namespace :admin do
+  # root 'homes#top'
+  # end
+  get 'home/about'=>'homes#about'
+
+  # devise_for :customers
+  root to: 'homes#top'
+
+
   devise_for :customers, controllers: {
     sessions: 'customers/sessions',
     registrations: 'customers/registrations'
@@ -10,13 +20,9 @@ Rails.application.routes.draw do
     }
   end
 
-  root 'homes#top'
-  namespace :admin do
-  root 'homes#top'
-  end
-
-  get 'home/about'=>'homes#about'
-
+  get 'customers/my_page'=>'customers#show'
+  get 'customers/unsubscribe'=>'customers#unsubscribe'
+  patch 'customers/withdraw'=>'customers#withdraw'
   resources :customers, only: [:show, :edit, :update, :unsubscribe, :withdraw]
     namespace :admin do
   resources :customers, only: [:index,:show, :edit, :update]
