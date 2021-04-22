@@ -1,2 +1,23 @@
-<h1>Customers#show</h1>
-<p>Find me in app/views/customers/show.html.erb</p>
+<h2>マイページ</h2>
+<div class = row >
+<!--↓カスタマーの編集画面を作ったらlink_toに変更-->
+  <h3>登録情報</h3>
+
+  <%= link_to "編集する", edit_customer_path(@customer.id), class: "btn btn-success" %>
+</div>
+
+<table class="table table-hover table-inverse">
+   <tr><th>氏名</th><td><%= @customer.first_name %> <%= @customer.last_name %></td></tr>
+　 <tr><th>カナ</th><td><%= @customer.first_name_kana %> <%= @customer.last_name_kana %></td></tr>
+　 <tr><th>郵便番号</th><td><%= @customer.postal_code %></td></tr>
+　 <tr><th>住所</th><td><%= @customer.address %></td></tr>
+　  <tr><th>電話番号</th><td><%= @customer.phone_number %></td></tr>
+　  <tr><th>メールアドレス</th><td><%= @customer.email %></td></tr>
+</table><br>
+
+
+
+<h5>配送先</h5> <%= link_to "一覧をみる", products_path(@customer.id), class: "btn btn-primary" %>
+
+
+<h5>注文履歴</h5> <%= link_to "一覧をみる", orders_path(@customer.id), class: "btn btn-primary" %>
