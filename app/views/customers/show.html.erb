@@ -1,6 +1,7 @@
+
 <h2>マイページ</h2>
 <div class = row >
-<!--↓カスタマーの編集画面を作ったらlink_toに変更-->
+
   <h3>登録情報</h3>
 
   <%= link_to "編集する", edit_customer_path(@customer.id), class: "btn btn-success" %>
@@ -21,3 +22,4 @@
 
 
 <h5>注文履歴</h5> <%= link_to "一覧をみる", orders_path(@customer.id), class: "btn btn-primary" %>
+
