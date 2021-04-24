@@ -15,6 +15,12 @@
       :email,
       :name
       ])
+      # resource に Admin か Customerが来る
+      if resource.is_a?(Admin)
+        admin_root_path
+      elsif resource.is_a?(Customer)
+        customers_my_page_path # ログイン後に遷移するpathを設定
+      end
     end
 
     protected
